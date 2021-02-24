@@ -13,10 +13,6 @@ public class Main {
 
         userService.createUsersTable();
 
-        userService.saveUser("Антон", "Лирник", (byte) 15);
-        userService.saveUser("Вячеслав", "Бутусов", (byte) 22);
-        userService.saveUser("Дмитрий", "Соколов", (byte) 26);
-        userService.saveUser("Дмитрий", "Брекоткин", (byte) 34);
 
         List<User> listUsers = userService.getAllUsers();
         for (User user : listUsers) {

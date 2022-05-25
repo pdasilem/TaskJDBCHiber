@@ -14,10 +14,11 @@ import java.util.Properties;
 
 public class Util {
     // реализуйте настройку соеденения с БД
-    private static final String URI = "jdbc:mysql://127.0.0.1:49154/userstable?permitMysqlScheme";
+    private static final String URI = "jdbc:mysql://127.0.0.1:49153/userstable?permitMysqlScheme";
     private static final String LOGIN = "root";
     private static final String PASSWORD = "root";
     private static final String DRIVER = "org.mariadb.jdbc.Driver";
+    private static final String AUTOCOMMIT = "false";
     private static Connection connection;
     private static SessionFactory factory = null;
 
@@ -36,6 +37,7 @@ public class Util {
             // set the properties for our DB
             Properties settings = new Properties();
             settings.setProperty(AvailableSettings.URL, URI);
+//            settings.setProperty(AvailableSettings.AUTOCOMMIT, AUTOCOMMIT);
             settings.setProperty(AvailableSettings.USER, LOGIN);
             settings.setProperty(AvailableSettings.PASS, PASSWORD);
             settings.setProperty(AvailableSettings.DRIVER, DRIVER);
